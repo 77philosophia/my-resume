@@ -8,6 +8,8 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
+    permissions:
+        contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -15,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'  #only support 3.12+ for rendercv
 
       - name: Install dependencies
         run: |
@@ -32,5 +34,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output  # RenderCV 会将所有渲染结果都放在这个目录下
+          publish_dir: ./rendercv_output
           force_orphan: true
