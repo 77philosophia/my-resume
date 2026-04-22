@@ -3,9 +3,9 @@
 
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
-  name: "wangxin_ch.yaml",
-  title: "wangxin_ch.yaml - CV",
-  footer: context { [#emph[wangxin\_ch.yaml -- #str(here().page())\/#str(counter(page).final().first())]] },
+  name: "wangxin_en.yaml",
+  title: "wangxin_en.yaml - CV",
+  footer: context { [#emph[wangxin\_en.yaml -- #str(here().page())\/#str(counter(page).final().first())]] },
   top-note: [ #emph[Last updated in Apr 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
@@ -81,12 +81,12 @@
   date: datetime(
     year: 2026,
     month: 4,
-    day: 21,
+    day: 22,
   ),
 )
 
 
-= wangxin\_ch.yaml
+= wangxin\_en.yaml
 
 #connections(
   [#connection-with-icon("location-dot")[San Francisco, CA]],
